@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  background: #fff5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: #c0392b;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.intro, .help, .resources {
+  background: #fceaea;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1rem auto;
+}
+
+.types .cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 2px solid #f5c6c6;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.resources ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.resources li {
+  margin-bottom: 1rem;
+}
+
+.resources a {
+  text-decoration: none;
+  color: #b03a2e;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #d98880;
+  color: white;
+  margin-top: 2rem;
+}
