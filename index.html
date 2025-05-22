@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>СТОП БУЛІНГ</title>
-  <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -15,7 +14,143 @@
       line-height: 1.6;
       scroll-behavior: smooth;
     }
-    ... (стилі залишаються без змін)
+
+    header {
+      background: #c0392b;
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    header button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      background: white;
+      color: #c0392b;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.3s;
+    }
+
+    header button:hover {
+      background: #f9c9c9;
+      transform: scale(1.05);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #e6b0aa;
+      margin: 0;
+      padding: 0.5rem 0;
+      list-style: none;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    nav li {
+      margin: 0 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #600000;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1s ease;
+    }
+
+    .cards {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 2px solid #f5c6c6;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInCard 0.6s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .help button {
+      display: inline-block;
+      margin: 0.5rem 1rem 0 0;
+      padding: 0.6rem 1.2rem;
+      background: #c0392b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .help button:hover {
+      background: #e74c3c;
+    }
+
+    .resources ul, .contact ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .resources a {
+      text-decoration: none;
+      color: #b03a2e;
+      font-weight: bold;
+    }
+
+    .resources a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #d98880;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    @keyframes fadeInDown {
+      0% {opacity: 0; transform: translateY(-20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInCard {
+      from {opacity: 0; transform: scale(0.95);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
   </style>
 </head>
 <body>
@@ -57,9 +192,9 @@
   <section id="resources" class="resources">
     <h2>Центри допомоги</h2>
     <ul>
-      <li><a href="https://la-strada.org.ua" target="_blank">La Strada Україна</a></li>
-      <li><a href="https://mon.gov.ua" target="_blank">Міністерство освіти і науки</a></li>
-      <li><a href="https://childhotline.org.ua" target="_blank">Дитяча гаряча лінія</a></li>
+      <li><a href="https://la-strada.org.ua" target="_blank" rel="noopener noreferrer">La Strada Україна</a></li>
+      <li><a href="https://mon.gov.ua" target="_blank" rel="noopener noreferrer">Міністерство освіти і науки</a></li>
+      <li><a href="https://childhotline.org.ua" target="_blank" rel="noopener noreferrer">Дитяча гаряча лінія</a></li>
     </ul>
     <div class="help">
       <button onclick="window.open('https://la-strada.org.ua', '_blank')">Отримати допомогу</button>
