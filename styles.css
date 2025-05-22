@@ -4,6 +4,7 @@ body {
   background: #fff5f5;
   color: #333;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -12,30 +13,63 @@ header {
   padding: 3rem 1rem;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  animation: fadeInDown 1s ease-in-out;
 }
 
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+header button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  background: white;
+  color: #c0392b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+header button:hover {
+  background: #f9c9c9;
+  transform: scale(1.05);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #e6b0aa;
+  margin: 0;
+  padding: 0.5rem 0;
+  list-style: none;
+  animation: fadeIn 1.5s ease-in;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #600000;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 section {
   padding: 2rem;
   max-width: 1000px;
   margin: auto;
+  animation: fadeInUp 1s ease;
 }
 
-.intro, .help, .resources {
-  background: #fceaea;
-  border-radius: 12px;
-  padding: 2rem;
-  margin: 1rem auto;
-}
-
-.types .cards {
+.cards {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 1rem;
 }
 
 .card {
@@ -43,21 +77,34 @@ section {
   padding: 1rem;
   border-radius: 10px;
   border: 2px solid #f5c6c6;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInCard 0.6s ease-in-out;
 }
 
 .card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-.resources ul {
+.help button {
+  display: inline-block;
+  margin: 0.5rem 1rem 0 0;
+  padding: 0.6rem 1.2rem;
+  background: #c0392b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.help button:hover {
+  background: #e74c3c;
+}
+
+.resources ul, .contact ul {
   list-style: none;
   padding-left: 0;
-}
-
-.resources li {
-  margin-bottom: 1rem;
 }
 
 .resources a {
@@ -66,10 +113,34 @@ section {
   font-weight: bold;
 }
 
+.resources a:hover {
+  text-decoration: underline;
+}
+
 footer {
   text-align: center;
   padding: 2rem;
   background: #d98880;
   color: white;
   margin-top: 2rem;
+}
+
+@keyframes fadeInDown {
+  0% {opacity: 0; transform: translateY(-20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  0% {opacity: 0; transform: translateY(20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInCard {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
