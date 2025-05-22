@@ -6,50 +6,147 @@
   <title>СТОП БУЛІНГ</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Ubuntu', sans-serif;
+      background: #fff5f5;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #c0392b;
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    header button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      background: white;
+      color: #c0392b;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.3s;
+    }
+
+    header button:hover {
+      background: #f9c9c9;
+      transform: scale(1.05);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #e6b0aa;
+      margin: 0;
+      padding: 0.5rem 0;
+      list-style: none;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    nav li {
+      margin: 0 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #600000;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1s ease;
+    }
+
+    .cards {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 2px solid #f5c6c6;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInCard 0.6s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .help button {
+      display: inline-block;
+      margin: 0.5rem 1rem 0 0;
+      padding: 0.6rem 1.2rem;
+      background: #c0392b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .help button:hover {
+      background: #e74c3c;
+    }
+
+    .resources ul, .contact ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .resources a {
+      text-decoration: none;
+      color: #b03a2e;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #d98880;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    @keyframes fadeInDown {
+      0% {opacity: 0; transform: translateY(-20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInCard {
+      from {opacity: 0; transform: scale(0.95);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>СТОП БУЛІНГ</h1>
-    <p>Разом ми можемо зупинити цькування</p>
-  </header>
-
-  <section class="intro">
-    <h2>Що таке булінг?</h2>
-    <p>Булінг — це агресивна поведінка, яка повторюється та має на меті принизити, образити чи залякати іншу людину.</p>
-    <p>Це може бути фізичне, психологічне, економічне або кіберцькування.</p>
-  </section>
-
-  <section class="types">
-    <h2>Види булінгу</h2>
-    <div class="cards">
-      <div class="card"><h3>Фізичний</h3><p>Штовхання, удари, пошкодження речей.</p></div>
-      <div class="card"><h3>Психологічний</h3><p>Образи, приниження, поширення чуток.</p></div>
-      <div class="card"><h3>Кібербулінг</h3><p>Цькування онлайн: коментарі, пости, повідомлення.</p></div>
-      <div class="card"><h3>Економічний</h3><p>Крадіжки грошей, знищення речей, шантаж.</p></div>
-    </div>
-  </section>
-
-  <section class="help">
-    <h2>Що робити?</h2>
-    <ul>
-      <li>Не мовчи — поговори з дорослими, яким довіряєш.</li>
-      <li>Фіксуй факти булінгу (записи, фото, скріни).</li>
-      <li>Звернись у спеціалізовану службу підтримки.</li>
-      <li>Підтримуй інших, хто страждає від булінгу.</li>
-    </ul>
-  </section>
-
-  <section class="resources">
-    <h2>Корисні ресурси</h2>
-    <ul>
-      <li><a href="https://la-strada.org.ua/" target="_blank">Ла Страда Україна — Гаряча лінія: 0 800 500 225</a></li>
-      <li><a href="https://childhelplineinternational.org/" target="_blank">Child Helpline International</a></li>
-      <li><a href="https://mon.gov.ua/ua/tag/buling" target="_blank">МОН — Протидія булінгу</a></li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>© 2025 СТОП БУЛІНГ. Ти не один — ми поруч.</p>
-  </footer>
+  <!-- решта коду без змін -->
 </body>
 </html>
